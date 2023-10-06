@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Prova</title>
 </head>
 
@@ -20,7 +21,14 @@
           <button class="btn">FLA TV</button>
         </li>
         <li>
-          <button class="btn">FUTEBOL</button>
+          <div class="dropdown">
+            <button class="btn">FUTEBOL<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+              <button class="btn">PÁGINA INICIAL</button>
+              <button class="btn">TODAS AS NOTÍCIAS</button>
+              <button class="btn">ELENCO PROFISSIONAL</button>
+            </div>
+          </div>
         </li>
         <li>
           <button class="btn">INGRESSOS</button>
@@ -29,11 +37,67 @@
     </nav>
   </header>
 
-  <aside class="sidebar-menu">
-    <button class="btn">Botão menu</button>
-    <button class="btn">Botão menu</button>
-    <button class="btn">Botão menu</button>
-  </aside>
+  <main>
+
+    <aside class="sidebar-menu">
+      <button class="btn">Botão menu</button>
+      <button class="btn">Botão menu</button>
+      <button class="btn">Botão menu</button>
+      <button class="btn">Botão menu</button>
+      <button class="btn">Botão menu</button>
+    </aside>
+
+    <div class="content">
+      <article >
+        <section>
+          <h1>História do Flamengo</h1>
+          <p>
+            O Flamengo foi fundado em 17 de novembro de 1895 para as disputas de remo. A entrada da equipe no futebol
+            aconteceu em
+            1912. Atualmente, o time rubro-negro é o maior vencedor da história do Campeonato Carioca, com 31 títulos. Segundo
+            diversas pesquisas, é o clube com o maior número de torcedores do País. Os dois principais títulos da história do
+            Flamengo ocorreram em 1981. Comandado pelo ídolo Zico, o time conquistou a Copa Libertadores da América, em final
+            contra
+            o Cobreloa, do Chile, e o Mundial Interclubes, diante do Liverpool, da Inglaterra. Foi na década de 1980, também,
+            que o
+            Flamengo conquistou o seu primeiro Campeonato Brasileiro.
+          </p>
+        </section>
+        <section>
+          <h1>Ficha técnica</h1>
+          <p>
+            <span><strong>Nome:</strong> Clube de Regatas do Flamengo</span>
+            <span><strong>Alcunhas:</strong> Fla, Mengão, Mengo, Time do Povo, Rubro-Negro</span>
+            <span><strong>Fundação:</strong> 17 de novembro de 1895</span>
+            <span><strong>Localização:</strong> Rio de Janeiro - RJ, Brasil</span>
+            <span><strong>Estádio:</strong> Maracanã</span>
+            <span><strong>Capacidade:</strong> 82.238</span>
+            <span><strong>Presidente:</strong> Patrícia Amorim</span>
+          </p>
+        </section>
+        <section>
+          <h2>Estádio</h2>
+          <p>
+            O Flamengo tem o Estádio José Bastos Padilha, na Gávea, onde recebia jogos contra equipes menores até a década de
+            1990.
+            Desde então, passou a ser mandante no Maracanã. O Estádio Jornalista Mário Filho, mais conhecido como Maracanã,
+            foi
+            construído para a Copa do Mundo de 1950, e inaugurado em 16 de junho daquele ano. O primeiro jogo do Mundial no
+            local
+            foi a vitória do Brasil sobre o México por 4 a 0. Cinco das seis partidas brasileiras no torneio foram no
+            Maracanã,
+            incluindo a final, em que o Uruguai derrotou a Seleção por 2 a 1. O estádio voltará a ser sede da Copa em 2014.
+          </p>
+        </section>
+      </article>
+      <span class="loader"></span>
+    </div>
+  </main>
+
+  <footer>
+    <p><b>06/10/2023</b> Elliton Dias - Prova 01</p>
+    <a href="https://github.com/EllitonDias">GitHub</a>
+  </footer>
 </body>
 
 </html>

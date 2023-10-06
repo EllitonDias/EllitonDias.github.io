@@ -2,16 +2,17 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
+  text-decoration: none;
 }
 
 nav {
+  width: 100%;
   padding: 10px;
   background-color: red;
 }
 
-header img{
-    width: 50px;
-    height: 50px;
+header img {
+  width: 50px;
 }
 
 nav ul {
@@ -21,6 +22,30 @@ nav ul {
 
 nav ul li {
   margin-right: 10px;
+}
+
+.dropdown-content {
+  color: black;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: auto;
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px 0px red;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content button {
+  margin-bottom: 10px;
+  border-radius: 0px;
+  border-bottom: 1px solid gray;
 }
 
 .btn {
@@ -34,19 +59,112 @@ nav ul li {
   transition: transform 400ms, box-shadow 400ms;
 }
 
-.btn:active{
-    box-shadow: 2px 3px 1px;
-    transform: translate(4px, 6px);
+.btn:active {
+  box-shadow: 2px 3px 1px;
+  transform: translate(4px, 6px);
 }
 
-.sidebar-menu{
-    padding: 10px;
-    height: 1200px;
-    width: 20vw; 
+.sidebar-menu {
+  padding: 10px;
+  height: 1200px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid red;
+}
+
+.sidebar-menu button {
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 1200px;
+  width: 80vw;
+}
+.content section {
+  margin-bottom: 10px;
+}
+.content p {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  width: 60px;
+  /* Define a largura do elemento que tem a classe loader */
+  height: 60px;
+  /* Define a altura do elemento que tem a classe loader */
+  border: 5px solid black;
+  /* Cria uma borda de 5px solida da cor preta */
+  border-bottom-color: red;
+  /* Define a cor da borda inferior como vermelha */
+  border-radius: 50%;
+  /* Deixa a borda 50% circular tranformando o elemento totalmente em um circulo */
+  display: inline-block;
+  /* Permite que possa aparecer outros elementos ao lado do elemento que tem a classe loader */
+  box-sizing: border-box;
+  /* Faz com que a largura e a altura do elemento incluam a borda e o preenchimento,
+    evitando que a borda aumente as dimensões do elemento */
+  animation: rotation 1s linear infinite;
+  /* Aplica a animação chamada 'rotation' com duração de 1 segundo,
+    função de temporização linear e execução infinita */
+}
+
+
+/* Definição da funcção 'rotation' usando o @keyframes */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    /* Define a rotação de 0 graus no início da animação */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* Define a rotação de 360 graus no final da animação */
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  main {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+  }
+
+  .sidebar-menu {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
 }
 
-.sidebar-menu button{
-    margin-bottom: 10px; 
+footer {
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer a {
+  color: white;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  font-weight: bold;
 }
